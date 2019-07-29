@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Bellota-LightItalic';
+    src:url('../fonts/Bellota-LightItalic.otf');
+}
+@font-face {
+    font-family: 'Bellota-BoldItallic.otf';
+    src : url('../fonts/Bellota-BoldItalic.otf');
+}
+body {
+    background-color: #ecf0f1;
+    line-height: 17px;
+}
+
+.top_bar {   /*curbs the whole bluish navigation bar */
+    width:100%;
+    min-width: 1050px;
+    height: 40px;
+    margin: 0 0 10px 0; /*sets the size of the margin bottom */
+    background-color: #74b9ff;
+    border-bottom:  0.25em solid blue;
+    color:black;
+    display:inline-flex;
+    position: fixed;
+    z-index: 10;
+}
+.logo a {   /*curbs the logo name of the */
+    font-family: 'Bellota-BoldItallic.otf',sans-serif;
+    margin-left: 10px;
+    font-size: 30;
+    position: relative;    
+    top:9px;  /* distance from the top of the navigation bar */  
+    text-shadow: #73B6E2 0.5px 0.5px 0px;
+    text-decoration: none;
+}
+nav {
+    float: left;
+    left: 69%;
+    position: relative;
+    margin: 10;
+}
+nav a {
+    position:relative;
+    color: white;  /*white  */      
+    text-decoration: none;
+     font-size: 17px;
+}
+
+nav a:hover {
+   border-bottom: 7px solid #0984e3;
+   color: green;
+}
+
+.wrapper { /*this class curbs the wrapper section in the user login page */
+  margin :0 auto;
+top : 50px;
+position: relative;
+left:-50;
+padding: 0 10px;
+width: 75%;
+min-width: 950px;
+}
+
+.column {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+    box-shadow: 2px 1px 2px 1px #95a5a6;
+    z-index: -1;    
+}
+.user_details {
+    width: 350px;
+    float: left;
+    margin-bottom: 20px;
+}
+#pc {
+    width: 180px;
+    height: 125px;
+    margin-right: 10px;
+}
+.user_details_left_right {
+    width: 125px;
+    display: inline-block;
+    position: absolute;
+}
+.main_column { /*contains the  text area and the submit button */
+    float: right;
+    width:60%;
+    z-index: -1;
+    min-height: 160px;
+}
+.post_form {
+    width: 100%;
+}
+.post_form textarea {
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 1px solid #D3D3D3;
+    font-size: 12px;
+}
+textarea :focus { /*gets rid of the heavy margin appearing in the text area */
+    outline: 0;
+}
+.post_form input[type="submit"] {
+    width: 15%;
+    height:60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #3498db;
+    font-family: 'Bellota-BoldItallic',sans-serif;
+    color: #fff;
+    text-shadow:  0.5px 0.5px 0px #73B6E2;
+    font-size: 15;
+    position: relative;
+    outline: 0;
+    margin: 0;
+    top: -20;
+}
