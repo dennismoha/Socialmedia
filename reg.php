@@ -56,7 +56,7 @@ if (isset($_POST['register_button'])) {
             
             
             //check if the email arleady exists
-            $em_check = mysqli_query($conn, "SELECT email from test where email='$email'"); //if it returns something it means that email is usd in the account
+            $em_check = mysqli_query($conn, "SELECT reg_email from users where reg_email='$email'"); //if it returns something it means that email is usd in the account
             
             //count the num of rows returned by em_check      
             $num_rows = mysqli_num_rows($em_check);

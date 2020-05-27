@@ -112,10 +112,15 @@ if (isset($_POST['register_button'])) {
         else if ($rand == 2) 
             $profile_pic = "assets/images/profile_pics/default/header.png"; 
          
-        $query = mysqli_query($conn,"INSERT INTO users VALUES('', '$fname', '$lname','$username', '$email', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
-              
-        array_push($error_array,"<span style='color:#14C800;'>your set to go buddy </span><br>");  
-                
+        /*$query = mysqli_query($conn,"INSERT INTO users VALUES('', '$fname', '$lname','$username', '$email', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");*/
+
+        $sql =  "INSERT INTO users (reg_fname,reg_lname,username,email,reg_password,singup_data,profile_pic,num_likes,num_posts,user_closed,friend_array) VALUES('$fname','$lname','$username','$email','$password','$date','$profile_pic','0','0','no',',')";
+        if(mysqli_query($conn,$sql)) {
+                    array_push($error_array,"<span style='color:#14C800;'>your set to go buddy </span><br>"); 
+        }else {
+            die('data inserted unsuccessfully ' .mysqli_error($conn));
+        }
+                       
      
     
      

@@ -4,7 +4,7 @@ require "config/config.php";              // this is the homepage of the user af
 
 if(isset($_SESSION['username'])) {
     $userLOGGEDIn=$_SESSION['username'];
-    $user_details_query=mysqli_query($conn,"SELECT * FROM USERS WHERE username='$userLOGGEDIn'"); //enables us to search the username of the logged in user from the database and output it on the navigation bae
+    $user_details_query=mysqli_query($conn,"SELECT * FROM users WHERE username='$userLOGGEDIn'"); //enables us to search the username of the logged in user from the database and output it on the navigation bae
     $user = mysqli_fetch_array($user_details_query); //contains all the details of the user as an array and it's refrenced below in the navigation panel
 }else {
     header("Location: register.php"); //stops them from accessing the homepage if not logged in.
@@ -31,7 +31,7 @@ if(isset($_SESSION['username'])) {
             </div>
             
             <nav> <!--curbs the navigation header of the icons -->
-                <a href="<?php echo  $userLOGGEDIn; ?>"><?php echo $user['first_name']; ?>   </a>   <!--the link user_logged in php helps take you to the profile page of the logged in user -->                 
+                <a href="<?php echo  $userLOGGEDIn; ?>"><?php echo $user['reg_fname']; ?>   </a>   <!--the link user_logged in php helps take you to the profile page of the logged in user -->                 
                 <a href="index.php" style="text-decoration: none" title="home"><i class="fa fa-home"></i></a>
                 <a href="#" style="text-decoration: none" title="messages"><i class="fa fa-envelope"></i></a>
                 <a href="#" style="text-decoration: none" title="notifications"><i class="fa fa-bell-o" style="font-size:24px"></i></a>

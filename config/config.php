@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 $conn = mysqli_connect("localhost","root","","social");
 $timezone = date_default_timezone_set('Africa/Nairobi');

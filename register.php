@@ -31,9 +31,9 @@ require 'includes/form_handler/login_handler.php';
         <div class="wrapper">
             <div class="login_box">
                 <div class="header">
-                    <h1>SOCIAL WEBSITE</H1>
+                    <h1>SOCIAL WEBSITE</h1>
                     <P>LOGIN or SINGUP </P>
-                </div>
+                </div>           
                 
                 <div id="first">
                     <form action="register.php" method="POST">
@@ -48,6 +48,7 @@ require 'includes/form_handler/login_handler.php';
                         
                     </form>
                 </div>
+            
                 
                
                 <div id="second">
@@ -55,7 +56,7 @@ require 'includes/form_handler/login_handler.php';
                           
                         <input type ="text" name ="reg_fname" placeholder="firstname" value = "<?php if(isset($_SESSION['reg_fname'])) { echo $_SESSION['reg_fname'];} ?>" required><br>
                         <?php if(in_array("your fname must be between 2 and 25<br>", $error_array)) echo "your fname must be between 2 and 25<br> "; ?> <!--spews out the error message stored in the $error_ variable -->
-                        <br><input type ="text" name ="reg_lname" placeholder="your lastname" value ="<?php if(isset($_SESSION['reg_lname'])) { echo $_SESSION['reg_lname'];} ?> " required><br>
+                        <br><input type ="text" name ="reg_lname" placeholder="llname" value ="<?php if(isset($_SESSION['reg_lname'])) { echo $_SESSION['reg_lname'];} ?> "  required><br>
                         <?php if(in_array("your lname should be betweeen 2 and 25<br>",$error_array))  echo "your lname should be betweeen 2 and 25<br>"; ?>
                         <br> <input type ="email" name ="reg_email" placeholder="enter your email" value="<?php if(isset($_SESSION['reg_email'])) { echo $_SESSION['reg_email'];} ?>" required><br>
 

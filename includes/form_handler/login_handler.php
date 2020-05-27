@@ -4,7 +4,10 @@ if(isset($_POST['login_button'])) {
    $_SESSION['log_email'] = $email;//store email in session variables
    $password = hash('sha512',$_POST['log_password']); //get password
    
-   $check_database_query = mysqli_query($conn, "SELECT * FROM users where email='$email' AND password='$password'");  
+   $check_database_query = mysqli_query($conn, "SELECT * FROM users where email='$email' AND reg_password='$password'");  
+   
+
+
    $check_login_query = mysqli_num_rows($check_database_query);
    
    
